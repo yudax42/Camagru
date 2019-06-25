@@ -1,36 +1,43 @@
 <?php
     class Form extends Database
     {
+        // User info
         public $username;
         public $email;
         public $password;
+        // User error msg signup & login
         public $username_err;
         public $password_err;
+        public $email_err;
+        // User info satus in update case
         public $username_update_status;
         public $email_update_status;
         public $pass_update_status;
-        public $email_err;
-        public $adminName = "Youssef";
-        public $host = "camagru";
+        // User send mail status
         public $mail_msg;
         public $mail_status;
         public $status_err;
         public $system_err;
         public $user_activation_code;
+        // User verify email status
         public static $email_status;
         public static $email_msg;
         
-    
+        // Returs 1 in case username is valid
         public function validate_username($username)
         {
+            //user name must be word and 4+ characters
             if(preg_match('/^\w{4,}$/',$username))
                 return(1);
         }
+        //Returns 1 in case email is valid
         public function validate_email($email)
         {
+            //validate email address
             if(filter_var($email, FILTER_VALIDATE_EMAIL))
                 return(1);
         }
+        //Returns 1 in case password is valid
         public function validate_password($password)
         {
             $uppercase = preg_match('@[A-Z]@', $password);
@@ -40,11 +47,13 @@
             if($uppercase && $lowercase && $number && $specialChars && !(strlen($password) < 7))
                 return(1);
         }
+        //Returs 1 if username not empty
         public function is_not_empty_input($input)
         {
             if(!empty(trim($input)))
                 return 1;
         }
+        //send activation email to user
         public function sendmail($email,$username,$user_activation_code)
         {
             $base_url = "http://localhost/camagru/Views/";
@@ -57,6 +66,7 @@
             if(mail($email,'email verification',$mail_body,"FROM: $this->adminName@$this->host"))
                 return(1);
         }
+        //verify the status of the email
         public static function verify_email($user_activation_code)
         {
             $self = new self;
@@ -81,6 +91,7 @@
             else
                 return 0;
         }
+        //register the new user
         public function signup()
         {
             if(!$this->is_not_empty_input($this->username))
@@ -145,6 +156,7 @@
     
             }
         }
+        //login the user 
         public function login()
         {
             if(!$this->is_not_empty_input($this->username))
@@ -168,12 +180,12 @@
             }
             
         }
+        // update user info
         public function update_info()
-        {
-           
+        {   
+            // Username
             if(isset($this->username) && isset($_SESSION["username"]))
             {
-                // nadi
                 if(!($this->username == $_SESSION["username"]))
                 {
                     if(!($this->validate_username($this->username) === 1))
@@ -200,6 +212,7 @@
                 }
                 
             }
+            // Email
             if(isset($this->email) && isset($_SESSION["email"]))
             {
                 if(!($this->email == $_SESSION["email"]))
@@ -238,6 +251,7 @@
                 }
                 
             }
+            // Password
             if($this->password != null)
             {
                 if($this->validate_password($this->password) === 1)
