@@ -2,8 +2,13 @@
 
     class Database
     {        
+        // Site admin info
+        public $adminName = "Youssef";
+        public $host = "camagru";
+
         public $fetch;
         public $from;
+        // Test element if exist in database and returns 1 if success
         public function test_if_x_in_db($table,$col,$x)
         {
             global $conn;
@@ -27,7 +32,7 @@
             }
             unset($conn);
         }
-
+        //check if user exists and infos is correct to login
         public function checkuser($user,$password,$hash_algo)
         {
             if($this->test_if_x_in_db("users","username",$user))
@@ -47,7 +52,7 @@
             else
                 $this->username_err = "No account found with that username";   
         }
-
+        // pass array with info to insert to db
         public function insert_to_db($table,$arr)
         {
             global $conn;
@@ -63,6 +68,7 @@
             }
   
         }
+        // to update element in database
         public function update_element_in_db($table,$col,$new_value,$condition)
         {
             global $conn;
