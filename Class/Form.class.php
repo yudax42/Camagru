@@ -176,11 +176,11 @@
                 // nadi
                 if(!($this->username == $_SESSION["username"]))
                 {
-                    if(!($this->validate_username($this->username) === 1 ))
+                    if(!($this->validate_username($this->username) === 1))
                     {
                         $this->username_update_status = "username not valid please try another one";
                     }
-                    if($this->test_if_x_in_db("users","username",$this->username))
+                    else if($this->test_if_x_in_db("users","username",$this->username))
                     {
                         $this->username_update_status = "username already exists please try another one";
                     }

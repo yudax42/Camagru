@@ -27,7 +27,7 @@
                         { 
                     ?>
                         <ul>
-                            <li><a href="#">create Post</a></li>
+                            <li><a href="createpost.view.php">create Post</a></li>
                             <li><a href="editprofile.view.php">edit profile</a></li>
                             <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/logged.view.php?action=logout">logout</a></li>
                         </ul>  
