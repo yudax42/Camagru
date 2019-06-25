@@ -19,7 +19,7 @@
                         <input type="text" name="username" autocomplete="off"> 
                         <label for="password">Password</label>
                         <input type="password" name="password" autocomplete="off">
-                        <input type="submit">
+                        <input type="submit" value="Login">
                     </form>
                     <span>Don't Have an account? <a href="signup.view.php">Signup</a></span>
                     

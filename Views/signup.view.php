@@ -30,7 +30,7 @@
                         <input type="text" name="email" autocomplete="off">
                         <label for="password">Password</label>
                         <input type="password" name="password" autocomplete="off">
-                        <input type="submit">
+                        <input type="submit" value="Signup">
                     </form>
                     <span>Already Have an account? <a href="login.view.php">login</a></span>
                     
