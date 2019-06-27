@@ -13,10 +13,14 @@
             <div>
                 <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
             </div>
-            <input type="radio" onclick="enable()" id="obj" value="hacker"/>
-                <li id='hacker'><img src="../Assets/obj/hacker.png"></li>
 
-            <canvas id="canvas" width="640" height="480"></canvas>
+            <input type="radio" name="obj" onclick="enable()" id="obj" value="mail"/>
+            <li id='hacker'><img src="../Assets/obj/hacker.png"></li>
+            <input type="radio" name="obj" onclick="enable()" id="obj" value="mail"/>
+            <li id='mail'><img src="../Assets/mail.png"></li>
+
+
+            <canvas id="canvas" width="640" height="480" hidden></canvas>
             <form method="post" accept-charset="utf-8" name="form1">
                 <input name="img" id='img' type="hidden"/>
                 <input name="hidden_data" id='hidden_data' type="hidden"/>

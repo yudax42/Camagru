@@ -10,12 +10,21 @@
         $name = mktime();
         $file = $upload_dir . $name . ".png";
         file_put_contents($file, $data);
-        if($_POST['img'] == 'hacker')
+        if($_POST['img'])
         {
+            switch($_POST['img'])
+            {
+                case "hacker":
+                    $obj = "hacker";
+                    break;
+                case "mail":
+                    $obj = "mail";
+                    break;
+            }
             $dest = imagecreatefrompng($file);
-            $src = imagecreatefrompng("../Assets/obj/hacker.png");
+            $src = imagecreatefrompng("../Assets/obj/$obj.png");
             $srcTransparency = 100;
-            list($srcWidth, $srcHeight) = getimagesize('../Assets/obj/hacker.png');
+            list($srcWidth, $srcHeight) = getimagesize("../Assets/obj/$obj.png");
         
             $src_xPosition = -100;
             $src_yPosition = -50;
