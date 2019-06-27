@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!empty($_POST['hidden_data']) && !empty($_POST['img']))
+    if(isset($_POST['hidden_data']) && !empty($_POST['hidden_data']) && !empty($_POST['img']))
     {
         $upload_dir = "upload/";
         $img = $_POST['hidden_data'];
