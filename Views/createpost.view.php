@@ -6,7 +6,7 @@
 ?>
     <body>
         <video id="video" width="640" height="480" autoplay></video>
-        <button id="snap">Snap Photo</button>
+        <button id="snap" onclick="uploadEx()" value="Upload">Snap Photo</button>
         <canvas id="canvas" width="640" height="480"></canvas>  
         <form method="post" accept-charset="utf-8" name="form1">
             <input name="hidden_data" id='hidden_data' type="hidden"/>
@@ -39,7 +39,7 @@
                 var fd = new FormData(document.forms["form1"]);
  
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'upload_data.php', true);
+                xhr.open('POST', '../Models/createpost.php', true);
  
                 xhr.upload.onprogress = function(e) {
                     if (e.lengthComputable) {
