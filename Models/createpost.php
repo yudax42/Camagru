@@ -20,14 +20,20 @@
                 case "mail":
                     $obj = "mail";
                     break;
+                case "code":
+                    $obj = "code";
+                    break;
+                case "1337":
+                    $obj = "1337";
+                    break;
             }
             $dest = imagecreatefrompng($file);
             $src = imagecreatefrompng("../Assets/obj/$obj.png");
             $srcTransparency = 100;
             list($srcWidth, $srcHeight) = getimagesize("../Assets/obj/$obj.png");
         
-            $src_xPosition = -100;
-            $src_yPosition = -50;
+            $src_xPosition =  0;
+            $src_yPosition = 10;
             $src_cropXposition = 0;
             $src_cropYposition = 0;
             imagecolortransparent($src,imagecolorat($src,0,0));
