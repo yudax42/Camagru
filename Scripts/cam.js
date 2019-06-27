@@ -18,7 +18,7 @@ var video = document.getElementById('video');
     });
 
 
-    if(document.getElementById('obj').checked) {
+    if(document.getElementsByClassName('obj').checked) {
         document.getElementById("snap").disabled = false;
     }
     else
@@ -30,10 +30,14 @@ var video = document.getElementById('video');
 
 function uploadEx() {
     context.drawImage(video, 0, 0, 640, 480);
-    if(document.getElementById('obj').checked) {
+    if(document.querySelector('input[name="obj"]:checked').value) {
+        
         var dataURL = canvas.toDataURL("image/png");
-        document.getElementById('img').value = document.getElementById('obj').value;
+        document.getElementById('img').value = document.querySelector('input[name="obj"]:checked').value;;
         console.log(document.getElementById('img').value);
+
+
+
         document.getElementById('hidden_data').value = dataURL;
         var fd = new FormData(document.forms["form1"]);
 

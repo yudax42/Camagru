@@ -14,9 +14,9 @@
                 <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
             </div>
 
-            <input type="radio" name="obj" onclick="enable()" id="obj" value="mail"/>
+            <input class='obj' type="radio" name="obj" onclick="enable()" value="hacker"/>
             <li id='hacker'><img src="../Assets/obj/hacker.png"></li>
-            <input type="radio" name="obj" onclick="enable()" id="obj" value="mail"/>
+            <input class="obj" type="radio" name="obj" onclick="enable()" value="mail"/>
             <li id='mail'><img src="../Assets/mail.png"></li>
 
 
