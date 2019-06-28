@@ -1,6 +1,8 @@
 <?php
     include("./Views/header.view.php");
     session_start();
+    if($_SESSION["loggedin"] == true)
+        header("location: ./Views/logged.view.php");
 ?>
 <html>
     <head>  

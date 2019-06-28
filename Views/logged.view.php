@@ -8,9 +8,11 @@
         <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
        
         <?php
-            if($post->fetchpost("posts"))
+            $list_post = new Pagination(5,"posts");
+            if($list_post->paginate())
             {
-                foreach($post->fetch as $row)
+
+                foreach($list_post->fetch as $row)
                 {
                     echo "<div class=post>";
                         echo "<section class=title>";
@@ -35,6 +37,12 @@
                         }
                         
                     echo "</div>";
+                }
+                $page = 1;
+                while($page < $list_post->total_pages)
+                {
+                    echo '<a href="#?page=' . $page . '">' . $page . '</a>';
+                    $page++;
                 }
             }
         ?>

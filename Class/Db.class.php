@@ -86,10 +86,10 @@
             }
   
         }
-        public function fetchpost($table)
+        public function fetchpost($table,$limit)
         {
             global $conn;
-            $query = "SELECT username,id,image,creation_date,likes FROM " . $table . " ORDER BY creation_date DESC";
+            $query = "SELECT username,id,image,creation_date,likes FROM " . $table ." ORDER BY creation_date DESC LIMIT ".$limit;
             if($stmt = $conn->prepare($query))
             {
                 if($stmt->execute())
@@ -123,7 +123,7 @@
                 if($stmt->execute())
                 {
                     $this->fetch = $stmt->fetchAll();
-                    $this->from = "comments";
+                    $this->from = "fetch_comment";
                     return(1);
                 }
             }
