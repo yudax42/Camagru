@@ -38,7 +38,7 @@
             <div class="right">
             <?php
                 $post = new Database;
-                if($post->fetch_user_table("posts",$_SESSION["username"]))
+                if($post->fetch_user_table("posts",$_SESSION['username']))
                 {
                     foreach($post->fetch as $row)
                     {

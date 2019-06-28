@@ -87,10 +87,10 @@
             }
   
         }
-        public function fetchtable($table)
+        public function fetchpost($table)
         {
             global $conn;
-            $query = "SELECT * FROM " . $table;
+            $query = "SELECT username,image,creation_date,likes FROM " . $table . " ORDER BY creation_date DESC";
             if($stmt = $conn->prepare($query))
             {
                 if($stmt->execute())
