@@ -101,4 +101,18 @@
                 }
             }
         }
+        public function fetch_user_table($table,$username)
+        {
+            global $conn;
+            $query = "SELECT * FROM " . $table . " WHERE username = \"" . $username . '"';
+            if($stmt = $conn->prepare($query))
+            {
+                if($stmt->execute())
+                {
+                    $this->fetch = $stmt->fetchAll();
+                    $this->from = "fetch_table";
+                    return(1);
+                }
+            }
+        }
     }
