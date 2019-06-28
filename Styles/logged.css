@@ -166,3 +166,21 @@ body
     background-color: green;
     color: #fff;
 }
+.conpage
+{
+    width: 65%;
+    margin: auto;
+}
+.conpage .pagination
+{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 16px;
+    background-color: #363737;
+    color: #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 16px;
+}
