@@ -44,7 +44,11 @@
                     if($this->fetch["status"] == "not verified")
                         $this->status_err = "Your account is not verified please check your email";
                     else if($this->fetch["password"] == $hashed_pass)
+                    {
+                        $this->user_id = $this->fetch["id"];
+                        $this->email = $this->fetch["email"];
                         return(1);
+                    }
                     else
                         $this->password_err = "Password Not Valid";   
                 }

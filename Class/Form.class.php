@@ -5,6 +5,7 @@
         public $username;
         public $email;
         public $password;
+        public $user_id;
         // User error msg signup & login
         public $username_err;
         public $password_err;
@@ -175,6 +176,7 @@
                         $_SESSION["loggedin"] = true;
                         $_SESSION["username"] = $this->username;
                         $_SESSION["email"] = $this->email;
+                        $_SESSION["user_id"] = $this->user_id;
                         return(1);
                 }
             }

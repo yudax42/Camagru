@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once "../Class/Db.class.php";
     if(isset($_POST['hidden_data']) && !empty($_POST['hidden_data']) && !empty($_POST['img']))
     {
         $upload_dir = "upload/";
