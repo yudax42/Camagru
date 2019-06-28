@@ -64,7 +64,6 @@
             $values  = array_values($arr);  
             $str="INSERT INTO $table (".implode(',',$columns).") VALUES ('" . implode("', '", $values) . "' )";
             $stmt = $conn->prepare($str);
-            echo $str;
             if($stmt->execute())
             {
                 unset($stmt);
@@ -90,7 +89,7 @@
         public function fetchpost($table)
         {
             global $conn;
-            $query = "SELECT username,image,creation_date,likes FROM " . $table . " ORDER BY creation_date DESC";
+            $query = "SELECT username,id,image,creation_date,likes FROM " . $table . " ORDER BY creation_date DESC";
             if($stmt = $conn->prepare($query))
             {
                 if($stmt->execute())
@@ -111,6 +110,20 @@
                 {
                     $this->fetch = $stmt->fetchAll();
                     $this->from = "fetch_table";
+                    return(1);
+                }
+            }
+        }
+        public function fetchcomments($table,$id)
+        {
+            global $conn;
+            $query = "SELECT * FROM " . $table . " WHERE post_id = \"" . $id . '"';
+            if($stmt = $conn->prepare($query))
+            {
+                if($stmt->execute())
+                {
+                    $this->fetch = $stmt->fetchAll();
+                    $this->from = "comments";
                     return(1);
                 }
             }

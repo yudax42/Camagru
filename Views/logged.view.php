@@ -1,8 +1,4 @@
 <?php
-    require_once "../config/connect.php";
-    include "../Class/Db.class.php";
-    include "../Class/Form.class.php";
-    include "../Class/User.class.php";
     require_once "../Models/logged.php";
     include("header.view.php");
     if($_SESSION["loggedin"] != true)
@@ -12,7 +8,6 @@
         <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
        
         <?php
-            $post = new Database;
             if($post->fetchpost("posts"))
             {
                 foreach($post->fetch as $row)
@@ -23,8 +18,22 @@
                             echo "<div class=creationdate>".$row['creation_date']."</div>";
                         echo "</section>";
                         echo "<img src='../Models/upload/".$row['image']."'/>";
-                        echo "<section class=likes>" . $row['likes'] ."</section>";
-                        echo "<section class=comments>". "</section>";
+                        echo "<section class=likes> likes " . $row['likes'] ."</section>";
+                        echo "<form action='#' method='POST'>
+                        <section class=comment>". 
+                        "<input type='text' name='comment'>"
+                        ."<input type='hidden' name='id' value='".$row['id']
+                        ."'/><button type='submit'>submit</button></section>
+                        
+                        </form>";
+                        if($post->fetchcomments("comments",$row["id"]))
+                        {
+                            foreach($post->fetch as $com)
+                            {
+                                echo $com["username"] . "=> " . $com["comment"]. "<br>";
+                            }
+                        }
+                        
                     echo "</div>";
                 }
             }
