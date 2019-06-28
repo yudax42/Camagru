@@ -10,18 +10,25 @@
 ?>
     <body class="animated fadeIn">
         <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
+       
         <?php
             $post = new Database;
             if($post->fetchpost("posts"))
             {
                 foreach($post->fetch as $row)
                 {
-                    echo $row['username'];
-                    echo "<img src='../Models/upload/".$row['image']."'/>";
-                    echo $row['likes'];
-                    echo "<br>";
+                    echo "<div class=post>";
+                        echo "<section class=title>";
+                            echo "<div class=name>".$row['username']."</div>";
+                            echo "<div class=creationdate>".$row['creation_date']."</div>";
+                        echo "</section>";
+                        echo "<img src='../Models/upload/".$row['image']."'/>";
+                        echo "<section class=likes>" . $row['likes'] ."</section>";
+                        echo "<section class=comments>". "</section>";
+                    echo "</div>";
                 }
             }
         ?>
+        </div>
     </body>
 </html>

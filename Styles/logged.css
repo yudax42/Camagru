@@ -115,3 +115,39 @@ body
 {
     cursor: pointer;
 }
+/* show posts */
+.post
+{
+    width: 63%;
+    margin: 6% auto;
+    background-color: #eaeaea;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.post .title
+{
+    padding: 18px;
+    background-color: #d9d9d9;
+    overflow: hidden;
+}
+.post .title .name
+{
+    float: left;
+}
+.post .title .creationdate
+{
+    float: right;
+}
+.post img
+{
+    width: 100%;
+}
+.post .likes
+{
+    padding: 18px;
+    background-color: #d9d9d9;
+}
+.post .comments
+{
+    padding: 18px;
+}
