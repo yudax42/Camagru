@@ -9,32 +9,49 @@
     </head>
     <body>
         <div class="container">
-
+            <div class="left">
             <video id="video"  autoplay></video>
-            <label>
-                <input class='obj' type="radio" name="obj" onclick="enable()" value="hacker"/>
-                <img src="../Assets/obj/hacker.png">
-            </label>
-            <label>
-                <input class="obj" type="radio" name="obj" onclick="enable()" value="mail"/>
-                <img src="../Assets/obj/mail.png">
-            </label>
-            <label>
-                <input class="obj" type="radio" name="obj" onclick="enable()" value="code"/>
-                <img src="../Assets/obj/code.png">
-            </label>
-            <label>
-                <input class="obj" type="radio" name="obj" onclick="enable()" value="1337"/>
-                <img src="../Assets/obj/1337.png">
-            </label>
-            <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
-            <!-- hidden element -->
-            <canvas id="canvas" width="640" height="480" hidden></canvas>
-            <form method="post" accept-charset="utf-8" name="form1">
-                <input name="img" id='img' type="hidden"/>
-                <input name="hidden_data" id='hidden_data' type="hidden"/>
-            </form>
+                <label>
+                    <input class='obj' type="radio" name="obj" onclick="enable()" value="hacker"/>
+                    <img src="../Assets/obj/hacker.png">
+                </label>
+                <label>
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="mail"/>
+                    <img src="../Assets/obj/mail.png">
+                </label>
+                <label>
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="code"/>
+                    <img src="../Assets/obj/code.png">
+                </label>
+                <label>
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="1337"/>
+                    <img src="../Assets/obj/1337.png">
+                </label>
+                <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
+                <!-- hidden element -->
+                <canvas id="canvas" width="640" height="480" hidden></canvas>
+                <form method="post" accept-charset="utf-8" name="form1">
+                    <input name="img" id='img' type="hidden"/>
+                    <input name="hidden_data" id='hidden_data' type="hidden"/>
+                </form>
+            </div>
+            <div class="right">
+            <?php
+                $post = new Database;
+                if($post->fetchtable("posts"))
+                {
+                    foreach($post->fetch as $row)
+                    {
+                        echo "<img src='../Models/upload/".$row['image']."'/>";
+                    }
+                }
+
+            ?>
+            </div>
         </div>
+
+
+
         <script src="../Scripts/cam.js"></script>
     </body>
 </html>

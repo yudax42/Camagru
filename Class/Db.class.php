@@ -64,6 +64,7 @@
             $values  = array_values($arr);  
             $str="INSERT INTO $table (".implode(',',$columns).") VALUES ('" . implode("', '", $values) . "' )";
             $stmt = $conn->prepare($str);
+            echo $str;
             if($stmt->execute())
             {
                 unset($stmt);
@@ -85,5 +86,19 @@
                 return(1);
             }
   
+        }
+        public function fetchtable($table)
+        {
+            global $conn;
+            $query = "SELECT * FROM " . $table;
+            if($stmt = $conn->prepare($query))
+            {
+                if($stmt->execute())
+                {
+                    $this->fetch = $stmt->fetchAll();
+                    $this->from = "fetch_table";
+                    return(1);
+                }
+            }
         }
     }

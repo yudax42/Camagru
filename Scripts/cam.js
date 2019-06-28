@@ -35,9 +35,6 @@ function uploadEx() {
         var dataURL = canvas.toDataURL("image/png");
         document.getElementById('img').value = document.querySelector('input[name="obj"]:checked').value;;
         console.log(document.getElementById('img').value);
-
-
-
         document.getElementById('hidden_data').value = dataURL;
         var fd = new FormData(document.forms["form1"]);
 
@@ -48,7 +45,7 @@ function uploadEx() {
             if (e.lengthComputable) {
                 var percentComplete = (e.loaded / e.total) * 100;
                 console.log(percentComplete + '% uploaded');
-                alert('Succesfully uploaded');
+                location.reload(); 
             }
         };
 
