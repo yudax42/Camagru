@@ -27,6 +27,10 @@
                     <input class="obj" type="radio" name="obj" onclick="enable()" value="1337"/>
                     <img src="../Assets/obj/1337.png">
                 </label>
+                <label>
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="basma"/>
+                    <img src="../Assets/obj/basma.png">
+                </label>
                 <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
                 <!-- hidden element -->
                 <canvas id="canvas" width="640" height="480" hidden></canvas>

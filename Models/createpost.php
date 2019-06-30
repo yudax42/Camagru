@@ -30,6 +30,9 @@
                 case "1337":
                     $obj = "1337";
                     break;
+                case "basma":
+                    $obj = "basma";
+                    break;
             }
             $dest = imagecreatefrompng($file);
             $src = imagecreatefrompng("../Assets/obj/$obj.png");
