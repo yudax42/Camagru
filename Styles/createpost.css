@@ -69,3 +69,10 @@ label img
     margin-bottom:30px;
     border-radius: 5px;
 }
+.posimg
+{
+    width: 367px;
+    height: 277px;
+    position: absolute;
+    top: 194px;
+}

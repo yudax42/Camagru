@@ -35,6 +35,7 @@
                 <!-- hidden element -->
                 <canvas id="canvas" width="640" height="480" hidden></canvas>
                 <form method="post" accept-charset="utf-8" name="form1">
+                    <input type="image" class="posimg">
                     <input name="img" id='img' type="hidden"/>
                     <input name="hidden_data" id='hidden_data' type="hidden"/>
                 </form>
