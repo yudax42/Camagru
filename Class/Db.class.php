@@ -62,7 +62,8 @@
             global $conn;
             $columns = array_keys($arr);
             $values  = array_values($arr);  
-            $str="INSERT INTO $table (".implode(',',$columns).") VALUES ('" . implode("', '", $values) . "' )";
+            $str="INSERT INTO $table (".implode(',',$columns).") VALUES (\"" . implode("\", \"", $values) . "\" )";
+            echo $str;
             $stmt = $conn->prepare($str);
             if($stmt->execute())
             {
