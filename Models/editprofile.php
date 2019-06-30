@@ -30,6 +30,15 @@
         $update = new User($user_info);
         $update->update_info();
     }
+    if($_SERVER['REQUEST_METHOD'] == 'GET')
+    {
+        $db = new Database;
+        $status = $_GET["property"];
+        if($status == 'yes')
+            $db->update_element_in_db("users","property","active","username = '" . $_SESSION["username"] . "'");
+        if($status == 'no')
+            $db->update_element_in_db("users","property","not active","username = '" . $_SESSION["username"] . "'");
+    }
 
     unset($stmt);
     unset($conn);

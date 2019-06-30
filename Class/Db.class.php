@@ -63,7 +63,6 @@
             $columns = array_keys($arr);
             $values  = array_values($arr);  
             $str="INSERT INTO $table (".implode(',',$columns).") VALUES (\"" . implode("\", \"", $values) . "\" )";
-            echo $str;
             $stmt = $conn->prepare($str);
             if($stmt->execute())
             {
@@ -78,6 +77,7 @@
         {
             global $conn;
             $query = "UPDATE ". $table. " SET ". $col ." = '".  $new_value . "' WHERE " .$condition;
+            echo $query;
             $stmt = $conn->prepare($query);
             if($stmt->execute())
             {

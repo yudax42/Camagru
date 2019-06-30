@@ -27,7 +27,8 @@
                     <img src="../Assets/message.png" alt="message">
                     <h4>Desactive comment email option!</h4>
                     <p>Note: you will not receive email notification when someone comment on your post</p>
-                    <button>Desactivate</button>
+                    <a href="?property=no"><button>Desactivate</button></a>
+                    <a href="?property=yes"><button>activate</button></a>
                 </div>
             </div>
         </div>
