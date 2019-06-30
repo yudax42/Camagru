@@ -40,8 +40,8 @@
             list($srcWidth, $srcHeight) = getimagesize("../Assets/obj/$obj.png");
         
             $src_xPosition =  0;
-            $src_yPosition = 30;
-            $src_cropXposition = 100;
+            $src_yPosition = 50;
+            $src_cropXposition = 0;
             $src_cropYposition = 0;
             imagecolortransparent($src,imagecolorat($src,0,0));
             imagecopymerge($dest,$src,$src_xPosition,$src_yPosition,$src_cropXposition,$src_cropYposition,$srcWidth,$srcHeight,$srcTransparency);
