@@ -18,20 +18,20 @@
         {
             switch($_POST['img'])
             {
-                case "hacker":
-                    $obj = "hacker";
+                case "bucket":
+                    $obj = "bucket";
                     break;
-                case "mail":
-                    $obj = "mail";
+                case "macaw":
+                    $obj = "macaw";
                     break;
-                case "code":
-                    $obj = "code";
+                case "sunset":
+                    $obj = "sunset";
                     break;
-                case "1337":
-                    $obj = "1337";
+                case "beach-ball":
+                    $obj = "beach-ball";
                     break;
-                case "basma":
-                    $obj = "basma";
+                case "compass":
+                    $obj = "compass";
                     break;
             }
             $dest = imagecreatefrompng($file);

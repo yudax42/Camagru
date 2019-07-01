@@ -12,24 +12,24 @@
             <div class="left">
             <video id="video"  autoplay></video>
                 <label>
-                    <input class='obj' type="radio" name="obj" onclick="enable()" value="hacker"/>
-                    <img src="../Assets/obj/hacker.png">
+                    <input class='obj' type="radio" name="obj" onclick="enable()" value="bucket"/>
+                    <img src="../Assets/obj/bucket.png">
                 </label>
                 <label>
-                    <input class="obj" type="radio" name="obj" onclick="enable()" value="mail"/>
-                    <img src="../Assets/obj/mail.png">
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="macaw"/>
+                    <img src="../Assets/obj/macaw.png">
                 </label>
                 <label>
-                    <input class="obj" type="radio" name="obj" onclick="enable()" value="code"/>
-                    <img src="../Assets/obj/code.png">
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="sunset"/>
+                    <img src="../Assets/obj/sunset.png">
                 </label>
                 <label>
-                    <input class="obj" type="radio" name="obj" onclick="enable()" value="1337"/>
-                    <img src="../Assets/obj/1337.png">
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="beach-ball"/>
+                    <img src="../Assets/obj/beach-ball.png">
                 </label>
                 <label>
-                    <input class="obj" type="radio" name="obj" onclick="enable()" value="basma"/>
-                    <img src="../Assets/obj/basma.png">
+                    <input class="obj" type="radio" name="obj" onclick="enable()" value="compass"/>
+                    <img src="../Assets/obj/compass.png">
                 </label>
                 <input type="button" id ="snap" onclick="uploadEx()" value="Upload" />
                 <!-- hidden element -->
