@@ -30,7 +30,7 @@
         $update = new User($user_info);
         $update->update_info();
     }
-    if($_SERVER['REQUEST_METHOD'] == 'GET')
+    if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET["property"]))
     {
         $db = new Database;
         $status = $_GET["property"];

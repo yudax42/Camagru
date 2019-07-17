@@ -27,6 +27,10 @@ var video = document.getElementById('video');
     {
         document.getElementById("snap").disabled = false;
     }
+    if(document.getElementById("upload").value != "") 
+    {
+        console.log("fadsf");
+    }
 
 function uploadEx() {
     context.drawImage(video, 0, 0, 640, 480);

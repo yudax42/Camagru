@@ -41,7 +41,7 @@
                         $email = $res["email"];
                         $img = $res["img"];
                         $property = $res["property"];
-                        if($property == "active")
+                        if($property == "active" && $user != $_SESSION["username"])
                         {
                             $message = "
                             hi " . $user . "<br>". "<p style='color:red'>" . $_SESSION["username"] . "</p> has commented in your post<br>"
@@ -51,8 +51,6 @@
                             if(!mail($email,"Someone Comment on your post",$message,"FROM:root@camagru\nMIME-Version: 1.0\nContent-Type: text/html; charset=utf-8\n"))
                                 echo "no"; 
                         }
-                        else
-                            echo "not active";
                     }
                     else    
                         echo 'not found';

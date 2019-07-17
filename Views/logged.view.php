@@ -22,7 +22,7 @@
                                 echo "<div class=creationdate>".$row['creation_date']."</div>";
                             echo "</section>";
                             echo "<img src='../Models/upload/".$row['image']."'/>";
-                            echo "<section class=likes> likes " . $row['likes'] ."</section>";
+                            echo "<section class=likes><a href='?like=yes'><img src='../Assets/like.png'/></a> likes " . $row['likes'] ."</section>";
                             echo "<form action='#' method='POST'>
                             <section class=comment>". 
                             "<input type='text' name='comment'>"

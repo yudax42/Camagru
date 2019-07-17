@@ -11,6 +11,8 @@
         <div class="container">
             <div class="left">
             <video id="video"  autoplay></video>
+            <p>Or upload image</p>
+            <input type="file" name="image" id="upload"><br>
                 <label>
                     <input class='obj' type="radio" name="obj" onclick="enable()" value="bucket"/>
                     <img src="../Assets/obj/bucket.png">
