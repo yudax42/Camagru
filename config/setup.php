@@ -31,14 +31,30 @@
 				CREATE TABLE IF NOT EXISTS comments(
 					id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 					post_id int NOT NULL,
+					username varchar(50) NOT NULL,
 					comment TINYTEXT NOT NULL
+				);
+				CREATE TABLE IF NOT EXISTS likes(
+					id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+					post_id int NOT NULL,
+					username varchar(50) NOT NULL,
+					status enum('liked','not liked') NOT NULL
 				);
 		";
 		$conn->exec($q);
+		$qpr = "
+			CREATE TABLE IF NOT EXISTS likes(
+				id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+				post_id int NOT NULL,
+				username varchar(50) NOT NULL
+			);
+		";
+		$conn->exec($qpr);
 		$q2 = "
 			use camagru;
 			ALTER TABLE posts ADD FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE;
 			ALTER TABLE comments ADD FOREIGN KEY (post_id) REFERENCES posts(id) ON UPDATE CASCADE ON DELETE CASCADE;
+			ALTER TABLE likes ADD FOREIGN KEY (post_id) REFERENCES posts(id) ON UPDATE CASCADE ON DELETE CASCADE;
         ";
         $conn->exec($q2);
         echo "<h1>Database Schema Created sucessfuly</h1>";

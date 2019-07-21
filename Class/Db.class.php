@@ -129,4 +129,17 @@
                 }
             }
         }
+        public function total_likes($table,$id)
+        {
+            global $conn;
+            $query = "SELECT COUNT(post_id) As total FROM " .$table. " WHERE post_id = \"" . $id . '"' . "AND status = 'liked'";
+            if($stmt = $conn->prepare($query))
+            {
+                if($stmt->execute())
+                {
+                    $total = $stmt->fetch();
+                    return($total[0]);
+                }
+            }
+        }
     }

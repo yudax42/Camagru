@@ -55,10 +55,28 @@
                     else    
                         echo 'not found';
 
-
                 }
             }
-
+        }
+        if($_SERVER["REQUEST_METHOD"] == "GET")
+        {
+            global $conn;
+         
+            if(isset($_GET["like"]) && isset($_GET["id"]))
+            {
+                $query = "SELECT * FROM `likes` WHERE post_id = " . $_GET["id"] . " AND  username = " . $_SESSION["username"];
+                $arr = 
+                [
+                    "post_id" => $_GET["id"],
+                    "username"=> $_SESSION["username"],
+                ];
+                $stmt = $conn->prepare($query);
+                if($stmt->rowCount() != 1 )
+                {
+                    $post->insert_to_db("likes",$arr);
+                    echo "wtf";
+                }
+            }
         }
     }
 ?>

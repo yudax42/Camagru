@@ -3,6 +3,45 @@
     include("header.view.php");
     if($_SESSION["loggedin"] != true)
         header("location: ../index.php");
+    if($_SERVER["REQUEST_METHOD"] == "GET")
+    {
+        global $conn;
+        
+        if(isset($_GET["like"]) && isset($_GET["id"]))
+        {
+            $condition = "post_id = " . $_GET["id"] . " AND  username = '" . $_SESSION["username"] . "'";
+            $query = "SELECT * FROM `likes` WHERE post_id = " . $_GET["id"] . " AND  username = '" . $_SESSION["username"] . "'";
+            echo $query;
+            $arr = 
+            [
+                "post_id" => $_GET["id"],
+                "username"=> $_SESSION["username"],
+                "status" => "liked"
+            ];
+            $stmt = $conn->prepare($query);
+            if($stmt->execute())
+            {
+                if($stmt->rowCount() == 0)
+                {
+                    $post->insert_to_db("likes",$arr);
+                }
+                else if($stmt->rowCount() == 1)
+                {
+                    $content = $stmt->fetch();
+                    if($content["status"] == "liked")
+                    {
+                        echo "yes";
+                        $post->update_element_in_db("likes","status","not liked",$condition);
+                    }
+                    else if($content["status"] == "not liked")
+                    {
+                        echo "yes";
+                        $post->update_element_in_db("likes","status","liked",$condition);
+                    }
+                }
+            }
+        }
+    }
 ?>
     <body class="animated fadeIn">
         <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
@@ -16,13 +55,17 @@
 
                     foreach($list_post->fetch as $row)
                     {
+                        if($post->total_likes("likes",$row["id"]) != '')
+                        {
+                            $total = $post->total_likes("likes",$row["id"]);
+                        }
                         echo "<div class=post>";
                             echo "<section class=title>";
                                 echo "<div class=name>".$row['username']."</div>";
                                 echo "<div class=creationdate>".$row['creation_date']."</div>";
                             echo "</section>";
                             echo "<img src='../Models/upload/".$row['image']."'/>";
-                            echo "<section class=likes><a href='?like=yes'><img src='../Assets/like.png'/></a> likes " . $row['likes'] ."</section>";
+                            echo "<section class=likes><a href='?like=yes&id=".$row['id']."'><img src='../Assets/like.png'/></a> likes " . $total ."</section>";
                             echo "<form action='#' method='POST'>
                             <section class=comment>". 
                             "<input type='text' name='comment'>"
