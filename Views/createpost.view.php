@@ -12,8 +12,9 @@
             <div class="left">
             <video id="video"  autoplay></video>
             <p>Or upload image</p>
-            <form action="../Models/upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="fileToUpload" id="fileToUpload">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input name="img1" id='img1' type="hidden"/>
+                <input type="file" name="fileToUpload" id="fileToUpload" onclick="check()">
                 <input type="submit" value="Upload Image" name="submit">
             </form>
                 <label>

@@ -26,10 +26,22 @@ var video = document.getElementById('video');
     function enable()
     {
         document.getElementById("snap").disabled = false;
+        document.getElementById('img1').value = document.querySelector('input[name="obj"]:checked').value;;
     }
-    if(document.getElementById("upload").value != "") 
+    function check()
     {
-        console.log("fadsf");
+        document.getElementById('video').style.display="none";
+        document.getElementById('snap').style.display="none";
+        let videoElem = document.getElementById('video');
+        let stream = videoElem.srcObject;
+        let tracks = stream.getTracks();
+        
+        tracks.forEach(function(track) {
+          track.stop();
+        });
+      
+        videoElem.srcObject = null;
+
     }
 
 function uploadEx() {
