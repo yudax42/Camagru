@@ -11,7 +11,6 @@
         {
             $condition = "post_id = " . $_GET["id"] . " AND  username = '" . $_SESSION["username"] . "'";
             $query = "SELECT * FROM `likes` WHERE post_id = " . $_GET["id"] . " AND  username = '" . $_SESSION["username"] . "'";
-            echo $query;
             $arr = 
             [
                 "post_id" => $_GET["id"],
@@ -30,12 +29,10 @@
                     $content = $stmt->fetch();
                     if($content["status"] == "liked")
                     {
-                        echo "yes";
                         $post->update_element_in_db("likes","status","not liked",$condition);
                     }
                     else if($content["status"] == "not liked")
                     {
-                        echo "yes";
                         $post->update_element_in_db("likes","status","liked",$condition);
                     }
                 }

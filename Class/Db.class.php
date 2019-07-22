@@ -77,7 +77,6 @@
         {
             global $conn;
             $query = "UPDATE ". $table. " SET ". $col ." = '".  $new_value . "' WHERE " .$condition;
-            echo $query;
             $stmt = $conn->prepare($query);
             if($stmt->execute())
             {

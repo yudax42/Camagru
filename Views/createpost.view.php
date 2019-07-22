@@ -12,7 +12,10 @@
             <div class="left">
             <video id="video"  autoplay></video>
             <p>Or upload image</p>
-            <input type="file" name="image" id="upload"><br>
+            <form action="../Models/upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
                 <label>
                     <input class='obj' type="radio" name="obj" onclick="enable()" value="bucket"/>
                     <img src="../Assets/obj/bucket.png">
