@@ -4,16 +4,11 @@
         <meta name="description" content="This is camagru website">
         <title>Signup</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../Styles/animate.css">
-        <link rel="stylesheet" href="../Styles/style.css">
-        <?php
-            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true)
-            {
-        ?>
-            <link rel="stylesheet" href="../Styles/logged.css">  
-        <?php
-            }
-        ?>
+
+            <link rel="stylesheet" href="../Styles/animate.css">
+            <link rel="stylesheet" href="../Styles/style.css">
+            <link rel="stylesheet" href="../Styles/logged.css">
+
     </head>
     <body>
         <header>
