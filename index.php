@@ -16,11 +16,14 @@
         header("location: ./Views/logged.view.php");
 ?>
 <head>
+        <link rel="stylesheet" href="./Styles/main.css">
         <link rel="stylesheet" href="./Styles/animate.css">
         <link rel="stylesheet" href="./Styles/style.css">
          <link rel="stylesheet" href="./Styles/logged.css">
+         <link rel="stylesheet" href="./Styles/main.css">
 </head>
 <body>
+    <div class="container">
     <?php
             $post = new Database;
             $list_post = new Pagination(5,"posts");
@@ -40,7 +43,7 @@
                                 echo "<div class=creationdate>".$row['creation_date']."</div>";
                             echo "</section>";
                             echo "<img src='./Models/upload/".$row['image']."'/>";
-                            echo "<section class=likes><a href='./Views/login.view.php'><img src='./Assets/like.png'/></a> likes " . $total ."</section>";
+                            echo "<section class=likes><a href='./Views/login.view.php'><img src='./Assets/like.png'/></a><span>  " . $total ." likes</span></section>";
                             echo "<form method='POST'>
                             <section class=comment>". 
                            "<input type='hidden' name='id' value='".$row['id']
@@ -51,7 +54,7 @@
                             {
                                 foreach($post->fetch as $com)
                                 {
-                                    echo $com["username"] . "=> " . $com["comment"]. "<br>";
+                                    echo "<div class='pcomment'><span>". $com["username"] . "</span> " . $com["comment"]. "</div>";
                                 }
                             }
                             
@@ -69,5 +72,6 @@
             }
 
         ?>
+        </div>
         </body>
 </html>

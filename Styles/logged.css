@@ -118,7 +118,7 @@ body
 /* show posts */
 .post
 {
-    width: 63%;
+    width: 100%;
     margin: 6% auto;
     background-color: #eaeaea;
     border-radius: 6px;

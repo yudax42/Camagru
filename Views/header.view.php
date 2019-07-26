@@ -8,7 +8,7 @@
             <link rel="stylesheet" href="../Styles/animate.css">
             <link rel="stylesheet" href="../Styles/style.css">
         <?php
-            if($_SESSION["loggedin"] == "true")
+            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true")
             {
 
         ?>

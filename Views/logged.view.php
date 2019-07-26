@@ -40,6 +40,9 @@
         }
     }
 ?>
+    <head>
+        <link rel="stylesheet" href="../Styles/main.css">
+    </head>
     <body class="animated fadeIn">
         <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
        <div class="container">
@@ -62,7 +65,7 @@
                                 echo "<div class=creationdate>".$row['creation_date']."</div>";
                             echo "</section>";
                             echo "<img src='../Models/upload/".$row['image']."'/>";
-                            echo "<section class=likes><a href='?like=yes&id=".$row['id']."'><img src='../Assets/like.png'/></a> likes " . $total ."</section>";
+                            echo "<section class=likes><a href='?like=yes&id=".$row['id']."'><img src='../Assets/like.png'/></a><span>" . $total ." likes</span></section>";
                             echo "<form action='#' method='POST'>
                             <section class=comment>". 
                             "<input type='text' name='comment'>"
@@ -72,10 +75,12 @@
                             </form>";
                             if($post->fetchcomments("comments",$row["id"]))
                             {
+                                echo "<div class='allcomment'>";
                                 foreach($post->fetch as $com)
                                 {
-                                    echo $com["username"] . "=> " . $com["comment"]. "<br>";
+                                    echo "<div class='pcomment'><span>". $com["username"] . "</span> " . $com["comment"]. "</div>";
                                 }
+                                echo "</div>";
                             }
                             
                         echo "</div>";
