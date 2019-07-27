@@ -30,6 +30,29 @@ body
     {
         width: 77%;
     }
+    .register .form {
+        width: 93%;
+    }
+    .usersettings .right {
+        float: none;
+        width: 111%;
+    }
+    .usersettings .left 
+    {
+        float: left;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 23px;
+    }
+    .usersettings {
+        width: 88%;
+        padding: 12px;
+        overflow: hidden;
+    }
+    .usersettings .right .info 
+    {
+        padding-left:0;
+    }
 }
 
 @media(min-width:768px) /* Small Screen Rules */
@@ -37,6 +60,9 @@ body
     .container
     {
         width: 750px;
+    }
+    .register .form {
+        width: 83%;
     }
 
 }
@@ -52,6 +78,10 @@ body
     .container
     {
         width: 1170px;
+    }
+    .register .form 
+    {
+        width: 67%;
     }
 }
 

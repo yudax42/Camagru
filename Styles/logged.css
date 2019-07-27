@@ -13,7 +13,7 @@ body
     margin: 12% auto;
     padding: 28px;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 .usersettings > h2

@@ -36,6 +36,8 @@
                         $post->update_element_in_db("likes","status","liked",$condition);
                     }
                 }
+                $link = "logged.view.php#".$_GET['id'];
+                header("Location: $link");
             }
         }
     }
@@ -44,7 +46,6 @@
         <link rel="stylesheet" href="../Styles/main.css">
     </head>
     <body class="animated fadeIn">
-        <h1>Welcome, <?php echo $_SESSION["username"];?></h1>
        <div class="container">
         <?php
             $list_post = new Pagination(5,"posts");
@@ -59,7 +60,7 @@
                         {
                             $total = $post->total_likes("likes",$row["id"]);
                         }
-                        echo "<div class=post>";
+                        echo "<div class=post id=".$row["id"].">";
                             echo "<section class=title>";
                                 echo "<div class=name>".$row['username']."</div>";
                                 echo "<div class=creationdate>".$row['creation_date']."</div>";

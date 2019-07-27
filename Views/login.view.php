@@ -3,6 +3,10 @@
     include("header.view.php");
     
 ?>
+    <head>
+        <link rel="stylesheet" href="../Styles/main.css">
+    </head>
+    <body style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,166,208,1) 0%, rgba(96,202,212,1) 100%);">
         <section class='register'>
             <div class="container">
                 <div class="form">

@@ -2,8 +2,11 @@
     require_once "../Models/editprofile.php";
     include("header.view.php");
 ?>
+<head>
+    <link rel="stylesheet" href="../Styles/main.css">
+</head>
 <body class="animated fadein">
-    <section class="usersettings">
+    <section class="usersettings container">
         <div class="left">
             <h2>User Settings</h2>
             <p>You can here modify your informations</p>
@@ -28,7 +31,7 @@
                     <h4>Desactive comment email option!</h4>
                     <p>Note: you will not receive email notification when someone comment on your post</p>
                     <a href="?property=no"><button>Desactivate</button></a>
-                    <a href="?property=yes"><button>activate</button></a>
+                    <a href="?property=yes"><button style="background-color:#87c787;margin-right:5px">activate</button></a>
                 </div>
             </div>
         </div>

@@ -52,10 +52,12 @@
                             </form>";
                             if($post->fetchcomments("comments",$row["id"]))
                             {
+                                echo "<div class='allcomment'>";
                                 foreach($post->fetch as $com)
                                 {
                                     echo "<div class='pcomment'><span>". $com["username"] . "</span> " . $com["comment"]. "</div>";
                                 }
+                                echo "</div>";
                             }
                             
                         echo "</div>";

@@ -14,7 +14,7 @@
         ?>
             <link rel="stylesheet" href="../Styles/logged.css">
             <?php } ?>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
@@ -28,9 +28,9 @@
                         { 
                     ?>
                         <ul>
-                            <li><a href="createpost.view.php">create Post</a></li>
-                            <li><a href="editprofile.view.php">edit profile</a></li>
-                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/logged.view.php?action=logout">logout</a></li>
+                            <li><a href="createpost.view.php"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="editprofile.view.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/logged.view.php?action=logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
                         </ul>  
 
 
@@ -40,8 +40,8 @@
                         {
                     ?>
                         <ul>
-                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/login.view.php">Login</a></li>
-                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/signup.view.php">Signup</a></li>
+                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/login.view.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                            <li><a href="http://<?php echo $_SERVER["HTTP_HOST"]?>/camagru/Views/signup.view.php"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
                         </ul>
 
                     <?php
