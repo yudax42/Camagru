@@ -30,8 +30,4 @@
                 </div>
             </div>
         </section>
-        <footer>
-
-        </footer>
-    </body>
-</html>
+<?php include("footer.view.php"); ?>

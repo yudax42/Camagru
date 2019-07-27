@@ -36,6 +36,6 @@
             </div>
         </div>
     </section>
-</body>
-
+    <div style="clear:both"></div>
+<?php include("footer.view.php"); ?>
 

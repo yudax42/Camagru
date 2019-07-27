@@ -157,3 +157,19 @@ body
     max-height: 246px;
     overflow: auto;
 }
+.body
+{
+    /* position: relative; */
+}
+.footer
+{
+    background: white;
+    padding: 25px;
+    height: 74px;
+    text-align: center;
+    margin-top: 10%;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+.footer i{color:red}

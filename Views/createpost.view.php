@@ -66,5 +66,4 @@
 
 
         <script src="../Scripts/cam.js"></script>
-    </body>
-</html>
+<?php include("footer.view.php"); ?>

@@ -17,6 +17,4 @@
             <a class="animated zoomInUp" href="login.view.php">login</a>
         </div>
 
-    </body>
-
-</html>
+<?php include("footer.view.php"); ?>
