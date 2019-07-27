@@ -61,7 +61,8 @@
         echo "Table Created:<br>";
         echo "users √ <br>";
         echo "posts √ <br>" ;
-        echo "comments √<br>";
+		echo "comments √<br>";
+		echo "likes √<br>";
 	}
 	catch(PDOException $e)
 	{

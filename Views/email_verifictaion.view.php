@@ -8,6 +8,9 @@
     }
         
 ?>
+    <head>
+        <link rel="stylesheet" src="../Styles/main.css">
+    </head>
     <body>
         <div class="succes_mail_box animated zoomInDown">
 
