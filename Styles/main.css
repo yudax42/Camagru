@@ -173,3 +173,12 @@ body
     width: 100%;
 }
 .footer i{color:red}
+.error
+{
+    background: #ef554d;
+    width: 50%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    color: #fff;
+}

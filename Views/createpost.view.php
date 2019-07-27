@@ -7,12 +7,16 @@
     <head>
         <link rel="stylesheet" href="../Styles/createpost.css">
         <link rel="stylesheet" href="../Styles/main.css">
+        <link rel="stylesheet" href="../Styles/animate.css">
     </head>
     <body>
         <div class="container">
+            <?php
+                if(isset($err) && !empty($err)) echo "<div class='error animated shake'>".$err. "</div>";
+            ?>
             <div class="left">
             <video id="video"  autoplay></video>
-            <p>Or upload image</p>
+            <p>Or upload image PNG</p>
             <form action="#" method="post" enctype="multipart/form-data">
                 <input name="img1" id='img1' type="hidden"/>
                 <input type="file" name="fileToUpload" id="fileToUpload" onclick="check()">
