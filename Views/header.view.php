@@ -1,3 +1,6 @@
+<?php
+    $page_name = basename($_SERVER['PHP_SELF']);
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -5,8 +8,8 @@
         <title>Signup</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-            <link rel="stylesheet" href="../Styles/animate.css">
-            <link rel="stylesheet" href="../Styles/style.css">
+            <link rel="stylesheet" href="<?php if($page_name != "index.php") echo ".";?>./Styles/animate.css">
+            <link rel="stylesheet" href="<?php if($page_name != "index.php") echo ".";?>./Styles/style.css">
         <?php
             if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true")
             {
