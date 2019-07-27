@@ -56,6 +56,8 @@
                         echo 'not found';
 
                 }
+                $link = "logged.view.php#".$_POST['id'];
+                header("Location: $link");
             }
         }
 

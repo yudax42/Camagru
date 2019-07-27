@@ -4,7 +4,15 @@ body
 }
 
 
-
+@media(max-width:534px)
+{
+    .right img {
+        width: 302px;
+        height: 194px;
+        display: block;
+        margin: 0 auto 15px;
+    }
+}
 
 @media(max-width:767px) /* Mobile & Tablet Rules */
 {
@@ -53,6 +61,21 @@ body
     {
         padding-left:0;
     }
+    .left
+    {
+        float:none;
+        width: 100%;
+    }
+    .right 
+    {
+        float:none;
+        width: 100%;
+    }
+    #video
+    {
+        width: 100%;
+    }
+
 }
 
 @media(min-width:768px) /* Small Screen Rules */
@@ -66,12 +89,21 @@ body
     }
 
 }
-@media(min-width:992px) /* Medium Screen Rules */
+@media(min-width:992px) and (max-width:1999px) /* Medium Screen Rules */
 {
     .container
     {
         width: 970px;
     }
+    #video
+    {
+        width: 88%;
+    }
+    .right img {
+        display: block;
+        margin: 0 auto 19px;
+    }
+
 }
 @media(min-width: 1200px) /* Large Screen Rules */
 {
@@ -83,6 +115,7 @@ body
     {
         width: 67%;
     }
+    
 }
 
 .post .likes span

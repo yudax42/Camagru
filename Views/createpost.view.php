@@ -6,6 +6,7 @@
 ?>
     <head>
         <link rel="stylesheet" href="../Styles/createpost.css">
+        <link rel="stylesheet" href="../Styles/main.css">
     </head>
     <body>
         <div class="container">
@@ -59,6 +60,7 @@
 
             ?>
             </div>
+            <div style="clear:both"></div>
         </div>
 
 
