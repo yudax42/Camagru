@@ -1,0 +1,190 @@
+header 
+{
+    border-bottom: 2px solid #e4e4e4;
+    background-color: #fff;
+}
+body
+{
+    background: #eee;
+}
+.usersettings
+{
+    width: 60%;
+    margin: 12% auto;
+    padding: 28px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+
+}
+.usersettings > h2
+{
+    font-weight: bold;
+    color: #1c414c;
+    margin-bottom: 4px;
+}
+.usersettings .left
+{
+    float: left;
+    width: 55%;
+    padding: 28px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.usersettings .right
+{
+    float: right;
+    width: 45%;
+}
+.usersettings .left p
+{
+    margin: 9px 0;
+    font-size: 9pt;
+    margin-left: 2px;
+    color: #949494;
+    margin-bottom: 23px;
+}
+.usersettings .left  span{
+    display: inline-block;
+    background: #f1cd20;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+.usersettings .left form label{display: block;}
+.usersettings .left form input
+{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin: 19px 0px 11px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #dadada;
+
+}
+.usersettings .left form button
+{
+    background: #87c787;
+    outline: none;
+    padding: 11px;
+    width: 100px;
+    font-size: 12pt;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.usersettings .right img
+{
+    display: block;
+    width: 100px;
+    margin: auto;
+}
+.usersettings .right .info
+{
+    width: 90%;
+    padding-left: 8%;
+}
+.usersettings .right .info h4{margin: 7px 0; text-align: center}
+.usersettings .right .info p{margin-left: 7px;}
+
+.usersettings .right .info .desactivate
+{
+    background: #fff;
+    padding: 10px;
+    margin: 0px auto;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+.usersettings .right .info .desactivate button
+{
+    padding: 10px;
+    margin-top: 9px;
+    display: block;
+    float: right;
+    background: #d48e8e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+}
+.usersettings .right .info .desactivate button:hover
+{
+    cursor: pointer;
+}
+/* show posts */
+.post
+{
+    width: 100%;
+    margin: 6% auto;
+    background-color: #eaeaea;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.post .title
+{
+    padding: 18px;
+    background-color: #d9d9d9;
+    overflow: hidden;
+}
+.post .title .name
+{
+    float: left;
+}
+.post .title .creationdate
+{
+    float: right;
+}
+.post img
+{
+    width: 100%;
+}
+.post .likes
+{
+    padding: 18px;
+    background-color: #d9d9d9;
+}
+.post .comment
+{
+    padding: 18px;
+}
+.post .comment input[type="text"]
+{
+    width: 86%;
+    padding: 10px;
+}
+.post .comment button
+{
+    padding: 10px;
+    margin-left: 14px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: #28b98a;
+    color: #fff;
+}
+.conpage
+{
+    width: 65%;
+    margin: auto;
+}
+.conpage .pagination
+{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 16px;
+    background-color: #363737;
+    color: #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 16px;
+}
+.post .likes img
+{
+    width: 31px;
+}
