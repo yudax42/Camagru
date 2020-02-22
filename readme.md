@@ -21,28 +21,28 @@ The application allows a user to sign up by asking a valid email address,usernam
 ## 📸 App Screenshots
 
 ### ▪️ login Page 
-![landing Page](./screenShots/login.jpeg)
+![landing Page](./ScreenShots/login.jpeg)
 
 ### ▪️ Signup Page
-![landing Page](./screenShots/signup.jpeg)
+![landing Page](./ScreenShots/signup.jpeg)
 
 ### ▪️ Reset Password Page
-![landing Page](./screenShots/forgot.jpeg)
+![landing Page](./ScreenShots/forgot.jpeg)
 
 ### ▪️ Email Verification 
-![landing Page](./screenShots/email_verification.jpeg)
+![landing Page](./ScreenShots/email_verification.jpeg)
 
 ### ▪️ Account Already verified
-![landing Page](./screenShots/alreadyactivated.jpeg)
+![landing Page](./ScreenShots/alreadyactivated.jpeg)
 
 ### ▪️ Gallery Page
-![landing Page](./screenShots/gallery.jpeg)
+![landing Page](./ScreenShots/gallery.jpeg)
 
 ### ▪️ Camera Page
-![landing Page](./screenShots/camera.jpeg)
+![landing Page](./ScreenShots/camera.jpeg)
 
 ### ▪️ User Settings Page
-![landing Page](./screenShots/userSettings.jpeg)
+![landing Page](./ScreenShots/userSettings.jpeg)
 
 
 Made with ❤️ @ 1337 School
